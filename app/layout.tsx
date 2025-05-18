@@ -23,11 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="light"
-      enableSystem
-    >
+    <ThemeProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={inter.className}>
           {children}

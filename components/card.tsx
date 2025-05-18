@@ -109,7 +109,7 @@ export function Card({
             ],
             transition: {
               duration: 2,
-              repeat: Number.POSITIVE_INFINITY,
+              repeat: Infinity, // Use Infinity instead of Number.POSITIVE_INFINITY
             },
           },
         }
@@ -242,7 +242,7 @@ export function Card({
           }}
           transition={{
             duration: 1.5,
-            repeat: Number.POSITIVE_INFINITY,
+            repeat: Infinity, // Use Infinity instead of Number.POSITIVE_INFINITY
             repeatType: "reverse",
           }}
         />

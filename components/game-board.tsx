@@ -75,7 +75,7 @@ export function GameBoard() {
       animationsEnabled: true,
     },
     tutorial: {
-      active: false,
+      active: true, // Changed from false to true
       step: "welcome",
       highlightElement: null,
     },
@@ -921,7 +921,7 @@ export function GameBoard() {
       battleResult: null,
       settings: prev.settings,
       tutorial: {
-        active: false,
+        active: true, // Changed from false to true
         step: "welcome",
         highlightElement: null,
       },
@@ -1516,33 +1516,37 @@ export function GameBoard() {
             </div>
           </div>
 
-          {/* Deck information - flex-1 to take remaining space */}
-          <div className="flex-1 bg-white p-2 rounded-lg border border-emerald-200 shadow-md min-h-0">
-            <h3 className="text-sm font-semibold text-emerald-700 mb-2 uppercase tracking-wider">Deck Status</h3>
+          {/* Deck information - centered and larger */}
+          <div className="flex-1 bg-white p-4 rounded-lg border border-emerald-200 shadow-md min-h-0">
+            <h3 className="text-lg font-bold text-emerald-700 mb-4 text-center uppercase tracking-wider">
+              Deck Status
+            </h3>
 
-            <div className="space-y-2 overflow-auto">
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-emerald-600">Your Deck:</span>
-                <span className="text-sm font-medium text-emerald-700">{gameState.player.deck.length} cards</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-emerald-600">Your Hand:</span>
-                <span className="text-sm font-medium text-emerald-700">{gameState.player.hand.length} cards</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-emerald-600">Discard Pile:</span>
-                <span className="text-sm font-medium text-emerald-700">{gameState.player.discardPile.length} cards</span>
-              </div>
+            <div className="space-y-4 flex flex-col items-center">
+              <div className="w-full max-w-sm">
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-lg font-medium text-emerald-600">Your Deck:</span>
+                  <span className="text-lg font-bold text-emerald-700">{gameState.player.deck.length} cards</span>
+                </div>
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-lg font-medium text-emerald-600">Your Hand:</span>
+                  <span className="text-lg font-bold text-emerald-700">{gameState.player.hand.length} cards</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-emerald-600">Discard Pile:</span>
+                  <span className="text-lg font-bold text-emerald-700">{gameState.player.discardPile.length} cards</span>
+                </div>
 
-              <div className="h-1 bg-emerald-200 rounded-full my-2"></div>
+                <div className="h-1 bg-emerald-200 rounded-full my-6"></div>
 
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-emerald-600">Computer's Deck:</span>
-                <span className="text-sm font-medium text-emerald-700">{gameState.computer.deck.length} cards</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm text-emerald-600">Computer's Hand:</span>
-                <span className="text-sm font-medium text-emerald-700">{gameState.computer.hand.length} cards</span>
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-lg font-medium text-emerald-600">Computer's Deck:</span>
+                  <span className="text-lg font-bold text-emerald-700">{gameState.computer.deck.length} cards</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-medium text-emerald-600">Computer's Hand:</span>
+                  <span className="text-lg font-bold text-emerald-700">{gameState.computer.hand.length} cards</span>
+                </div>
               </div>
             </div>
           </div>

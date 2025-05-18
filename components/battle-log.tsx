@@ -15,7 +15,10 @@ export const BattleLog = forwardRef<HTMLDivElement, BattleLogProps>(({ messages 
       </h3>
       <div
         ref={ref}
-        className="space-y-1 overflow-y-auto h-[calc(100%-28px)] pr-1 scrollbar-thin scrollbar-thumb-emerald-300 scrollbar-track-emerald-100"
+        className="space-y-1 overflow-y-auto h-[calc(100%-28px)] pr-1 
+          scrollbar scrollbar-w-2 scrollbar-track-emerald-100 
+          scrollbar-thumb-emerald-400 hover:scrollbar-thumb-emerald-500
+          scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
       >
         <AnimatePresence>
           {messages.map((message, index) => (
